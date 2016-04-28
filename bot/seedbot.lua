@@ -4,7 +4,7 @@ package.cpath = package.cpath .. ';.luarocks/lib/lua/5.2/?.so'
 
 require("./bot/utils")
 
-VERSION = '2'
+VERSION = '1.5'
 
 -- This function is called when tg receive a msg
 function on_msg_receive (msg)
@@ -226,20 +226,17 @@ function create_config( )
     "leave_ban",
     "admin"
     },
-    sudo_users = {110626080,103649648,143723991,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {78916979,0,0,0,0,tonumber(our_id)},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
     about_text = [[Teleseed v2 - Open Source
 An advance Administration bot based on yagop/telegram-bot 
 
-https://github.com/SEEDTEAM/TeleSeed
+https://github.com/assassinboy208/eagleTG
 
 Our team!
-Alphonse (@Iwals)
-I M /-\ N (@Imandaneshi)
-Siyanew (@Siyanew)
-Rondoozle (@Potus)
-Seyedan (@Seyedan25)
+unknown (@Xx_unknown_xX)
+ali (@tnt54)
 
 Special thanks to:
 Juan Potato
@@ -248,8 +245,8 @@ Topkecleon
 Vamptacus
 
 Our channels:
-English: @TeleSeedCH
-Persian: @IranSeed
+English: @kingboo
+Persian: @eagle_tg_CH
 ]],
     help_text_realm = [[
 Realm Commands:
@@ -324,108 +321,112 @@ This command will send text to [group_id]
 
 ]],
     help_text = [[
-Commands list :
+لیست راهنما:
 
-!kick [username|id]
-You can also do it by reply
+!kick [username|id|reply]
+اخراج کردن فرد
 
-!ban [ username|id]
-You can also do it by reply
+!ban [username|id|reply]
+مسدود سازی فرد 
 
-!unban [id]
-You can also do it by reply
+!unban [username|id|reply]
+آزاد سازی فرد
 
 !who
-Members list
+{لیست اعضای گروه}
 
 !modlist
-Moderators list
+{نشان دادن لیست مدیران}
 
-!promote [username]
-Promote someone
+!promote [username|id|reply]
+مقام دادن
 
 !demote [username]
-Demote someone
+گرفتن مقام
 
 !kickme
-Will kick user
+اخراج خود از گروه
 
 !about
-Group description
+توضیحات گروه
 
 !setphoto
-Set and locks group photo
+تنظیم عکس گروه
 
 !setname [name]
-Set group name
+تنظیم نام گروه
 
 !rules
-Group rules
+دیدن راهنمای گروه
 
 !id
-Return group id or user id
+نشان دادن آیدی گروه
 
 !help
-Get commands list
+دستورات راهنما
 
 !lock [member|name|bots|leave] 
-Locks [member|name|bots|leaveing] 
+قفل کردن ممبر و نام و ربات ها و خروج 
 
 !unlock [member|name|bots|leave]
-Unlocks [member|name|bots|leaving]
+از قفل در آورذن ممبر و نام و ربات ها و خروج
 
 !set rules [text]
-Set [text] as rules
+تنظیم راهنمای گروه
 
 !set about [text]
-Set [text] as about
+تنظیم توضیحات گروه
 
 !settings
-Returns group settings
+نمایش تنضیمات گروه
 
 !newlink
-Create/revoke your group link
+عوض کردن لینک گروه
 
 !link
-Returns group link
+نمایش لینک گروه
 
 !owner
-Returns group owner id
+نشان دادن صاحب گروه
 
 !setowner [id]
-Will set id as owner
+تنظیم صاحب گروه با آیدی عددی
 
 !setflood [value]
-Set [value] as flood sensitivity
+تنظیم حساسیت اسپم
 
 !stats
-Simple message statistics
+استیتس
 
 !save [value] [text]
-Save [text] as [value]
+ذخیره کردن متن با عدد
 
 !get [value]
-Returns text of [value]
+نشان دادن متن سیو شده با عدد
 
 !clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
+پاک کردن لیست مدیران و توضیحات و راهنمای گروه
 
 !res [username]
-Returns user id
+مشخصات فرد
 
 !log
-Will return group logs
+نشان دادن لوگ گروه
 
 !banlist
-Will return group ban list
+لیست افراد مسدود
 
-» U can use both "/" and "!" 
+» U can use both "/" and "!"
+ شما میتوانید از "/" و "!" استفاده کنید
 
 » Only mods, owner and admin can add bots in group
+ فقط مدیران|صاحب گروه و ادمین ها میتوانند ربا بیاورند
 
 » Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
+ فقط مدیران و بالاتر میتوانند انجام دهند
 
 » Only owner can use res,setowner,promote,demote and log commands
+ فقط صاحب گروه میتواند
 
 ]]
   }
