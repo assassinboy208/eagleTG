@@ -217,6 +217,10 @@ function create_config( )
     "anti_spam",
     "owners",
     "arabic_lock",
+    "calc",
+    "dogify",
+    "shot",
+    "Add_Bot",
     "set",
     "get",
     "broadcast",
@@ -251,7 +255,7 @@ Persian: @eagle_tg_CH
     help_text_realm = [[
 Realm Commands:
 
-!creategroup [name]
+!cgp [name]
 Create a group
 
 !createrealm [name]
