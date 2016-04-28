@@ -226,7 +226,7 @@ function create_config( )
     "leave_ban",
     "admin"
     },
-    sudo_users = {78916979,0,0,0,0,tonumber(our_id)},--Sudo users
+    sudo_users = {78916979,0,0,0,tonumber(our_id)},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
     about_text = [[Teleseed v2 - Open Source
@@ -235,7 +235,7 @@ An advance Administration bot based on yagop/telegram-bot
 https://github.com/assassinboy208/eagleTG
 
 Our team!
-unknown (@Xx_unknown_xX)
+@Xx_unknown_xX
 ali (@tnt54)
 
 Special thanks to:
@@ -251,7 +251,7 @@ Persian: @eagle_tg_CH
     help_text_realm = [[
 Realm Commands:
 
-!creategroup [name]
+!cgp [name]
 Create a group
 
 !createrealm [name]
@@ -321,7 +321,7 @@ This command will send text to [group_id]
 
 ]],
     help_text = [[
-لیست راهنما:
+لیست راهنمای ربات eagle
 
 !kick [username|id|reply]
 اخراج کردن فرد
@@ -427,6 +427,9 @@ This command will send text to [group_id]
 
 » Only owner can use res,setowner,promote,demote and log commands
  فقط صاحب گروه میتواند
+ 
+ @eagle_TG
+ @eagle_tg_CH
 
 ]]
   }
